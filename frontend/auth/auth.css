@@ -1,0 +1,186 @@
+/* Page background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #020617;
+    color: white;
+}
+
+/* Auth box (Login / Signup / Health details) */
+.auth-container {
+    width: 380px;
+    margin: 120px auto;
+    padding: 30px;
+    background: #0f172a;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Headings */
+.auth-container h1 {
+    margin-bottom: 8px;
+}
+
+.auth-container p {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+/* Input fields */
+.auth-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+/* Submit button */
+.auth-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #22c55e;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.auth-container button:hover {
+    background: #16a34a;
+}
+
+/* Bottom text */
+.note {
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+/* Links */
+.note a {
+    color: #22c55e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.note a:hover {
+    text-decoration: underline;
+}
+/* Password field with eye icon */
+.password-box {
+    position: relative;
+}
+
+.password-box input {
+    width: 100%;
+}
+
+.password-box span {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+}
+/* Dropdown */
+.auth-container select {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+/* Checkbox group */
+.checkbox-group {
+    text-align: left;
+    margin: 15px 0;
+}
+
+.checkbox-group label {
+    display: block;
+    margin: 6px 0;
+    font-size: 14px;
+}
+/* Menstruation Section */
+.menstruation-box {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background: #020617;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.menstruation-box h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.auth-container select {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+.menstruation-box {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background: #020617;
+    border-radius: 8px;
+}
+/* ===============================
+   FORCE ALL INPUT BOXES EQUAL SIZE
+================================ */
+
+/* All inputs & selects same size */
+.auth-container input,
+.auth-container select {
+    width: 100%;
+    height: 46px;              /* 🔑 SAME HEIGHT */
+    padding: 10px 14px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    box-sizing: border-box;    /* 🔑 VERY IMPORTANT */
+}
+
+/* Remove browser number arrows (causing height issues) */
+.auth-container input[type=number]::-webkit-inner-spin-button,
+.auth-container input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.auth-container input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Checkbox alignment */
+.checkbox-group input[type="checkbox"],
+.menstruation-box input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+/* Menstruation section spacing fix */
+.menstruation-box input,
+.menstruation-box select {
+    height: 46px;
+}

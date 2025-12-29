@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up | Smart Life Saver</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+<div class="auth-container">
+    <h1>Create Account</h1>
+    <p>Start your health journey</p>
+
+    <form onsubmit="return validatePassword()" action="health-details.html">
+
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+
+        <!-- Password -->
+        <div class="password-box">
+            <input type="password" id="password" placeholder="Password" required>
+            <span onclick="togglePassword('password')"></span>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="password-box">
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            <span onclick="togglePassword('confirmPassword')"></span>
+        </div>
+
+        <button type="submit">Continue</button>
+    </form>
+
+
+    <p class="note">
+        Already have an account?
+        <a href="login.html">Login</a>
+    </p>
+    <script>
+        function validatePassword() {
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return false; // stop form submission
+            }
+
+            return true; // allow form submission
+        }
+    </script>
+
+</div>
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="auth.css">
+<script>
+    function togglePassword(id) {
+        const input = document.getElementById(id);
+        input.type = input.type === "password" ? "text" : "password";
+    }
+
+    function validatePassword() {
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
+
+        if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<script src="auth.js"></script>
+</body>
+</html>
