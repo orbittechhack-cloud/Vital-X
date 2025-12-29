@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Health Details | Smart Life Saver</title>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- Auth CSS -->
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+<div class="auth-container">
+    <h1>Health Details</h1>
+    <p>This helps us personalize your health tracking</p>
+
+    <form action="../dashboard/dashboard.html">
+
+        <!-- Basic Info -->
+        <input type="number" placeholder="Age" required>
+        <input type="number" placeholder="Height (cm)" required>
+        <input type="number" placeholder="Weight (kg)" required>
+
+        <!-- Gender -->
+        <select id="gender" onchange="handleGenderChange()" required>
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <div id="menstruationSection" class="menstruation-box">
+
+            <h3>Menstruation Health</h3>
+
+            <input type="number" placeholder="Average Cycle Length (days)">
+            <input type="number" placeholder="Period Duration (days)">
+
+            <select>
+                <option value="">Pain Level</option>
+                <option>Mild</option>
+                <option>Moderate</option>
+                <option>Severe</option>
+            </select>
+
+            <select>
+                <option value="">Flow Type</option>
+                <option>Light</option>
+                <option>Medium</option>
+                <option>Heavy</option>
+            </select>
+
+            <label>
+                <input type="checkbox"> Irregular Periods
+            </label>
+
+        </div>
+
+
+        <!-- 🌸 Menstruation Section (Hidden by default) -->
+        <div id="menstruationSection" class="menstruation-box">
+
+            <h3>Menstruation Health</h3>
+
+            <input type="number" placeholder="Average Cycle Length (days)">
+            <input type="number" placeholder="Period Duration (days)">
+
+            <select>
+                <option value="">Pain Level</option>
+                <option>Mild</option>
+                <option>Moderate</option>
+                <option>Severe</option>
+            </select>
+
+            <select>
+                <option value="">Flow Type</option>
+                <option>Light</option>
+                <option>Medium</option>
+                <option>Heavy</option>
+            </select>
+
+            <label>
+                <input type="checkbox"> Irregular Periods
+            </label>
+
+        </div>
+
+
+        <!-- Habits (Detailed Options) -->
+
+        <select required>
+            <option value="">Smoking Habit</option>
+            <option>Never</option>
+            <option>Occasionally</option>
+            <option>Regular</option>
+            <option>Heavy</option>
+        </select>
+
+        <select required>
+            <option value="">Alcohol Consumption</option>
+            <option>Never</option>
+            <option>Occasionally</option>
+            <option>Weekly</option>
+            <option>Daily</option>
+        </select>
+
+        <select required>
+            <option value="">Sleep Quality</option>
+            <option>Good (7–8 hrs)</option>
+            <option>Average (5–6 hrs)</option>
+            <option>Poor (&lt;5 hrs)</option>
+            <option>Insomnia</option>
+        </select>
+
+
+
+        <!-- Medical Conditions -->
+        <select>
+            <option value="">Any Medical Condition?</option>
+            <option>Asthma</option>
+            <option>BP</option>
+            <option>Diabetes</option>
+            <option>Heart Issue</option>
+        </select>
+
+        <button type="submit">Continue to Dashboard</button>
+    </form>
+</div>
+
+<script src="auth.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Smart Life Saver</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>Smart Life Saver</h2>
+
+        <nav>
+            <a href="pages/profile.html">👤 Profile</a>
+            <a href="dashboard.html">📊 Dashboard</a>
+
+            <p class="section">Health</p>
+            <a href="pages/body-health.html">🧍 3D Body Health</a>
+            <a href="pages/menstruation.html" id="womenNav">🌸 Menstruation</a>
+            <a href="pages/diet.html">🥗 Diet & Nutrition</a>
+            <a href="pages/calories.html">🔥 Calorie Calculator</a>
+
+            <p class="section">Intelligence</p>
+            <a href="pages/ai-chat.html">🤖 AI Chat</a>
+            <a href="pages/environment.html">🌍 Environment</a>
+
+            <p class="section">Safety</p>
+            <a href="pages/emergency.html">🚨 Emergency (SOS)</a>
+        </nav>
+
+        <!-- LOGOUT -->
+        <button class="logout" onclick="logout()">Logout</button>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+        <h1>Welcome to Smart Life Saver</h1>
+        <p>Select a feature from the left menu.</p>
+    </main>
+
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

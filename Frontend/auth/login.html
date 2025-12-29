@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Smart Life Saver</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+<div class="auth-container">
+    <h1>Welcome Back</h1>
+    <p>Login to continue your health journey</p>
+
+    <form onsubmit="return loginUser()">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+
+        <!-- Error message -->
+        <p id="errorMsg" class="error"></p>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <p class="note">
+        New user?
+        <a href="signup.html">Create an account</a>
+    </p>
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>
