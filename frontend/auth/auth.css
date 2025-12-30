@@ -184,3 +184,41 @@ body {
 .menstruation-box select {
     height: 46px;
 }
+/* ================= LANDING PAGE THEME MATCH ================= */
+
+/* Brand section */
+.auth-brand {
+    margin-bottom: 22px;
+}
+
+.auth-brand .logo {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.auth-brand .tagline {
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+/* Slight glass polish (no input changes) */
+.auth-container {
+    background: linear-gradient(
+            180deg,
+            rgba(15,23,42,0.9),
+            rgba(15,23,42,0.75)
+    );
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Button color to match landing CTA */
+.auth-container button {
+    background: linear-gradient(135deg, #2dd4bf, #22d3ee);
+    color: #020617;
+}
+
+.auth-container button:hover {
+    background: linear-gradient(135deg, #22d3ee, #2dd4bf);
+}

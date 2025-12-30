@@ -107,3 +107,59 @@ aboutCards.forEach(card => {
     card.style.transform = 'translateY(40px)';
     aboutObserver.observe(card);
 });
+
+// Emergency section scroll animation
+const emergencySection = document.querySelector('.emergency-section');
+if (emergencySection) {
+    const emergencyObserver = new IntersectionObserver(
+        entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+
+    const emergencyLeft = document.querySelector('.emergency-left');
+    const emergencyVisual = document.querySelector('.emergency-visual');
+    
+    if (emergencyLeft) {
+        emergencyLeft.style.opacity = '0';
+        emergencyLeft.style.transform = 'translateX(-40px)';
+        emergencyLeft.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        emergencyObserver.observe(emergencyLeft);
+    }
+    
+    if (emergencyVisual) {
+        emergencyVisual.style.opacity = '0';
+        emergencyVisual.style.transform = 'translateX(40px)';
+        emergencyVisual.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        emergencyObserver.observe(emergencyVisual);
+    }
+}
+
+// Feature cards animation
+const featureCards = document.querySelectorAll('.feature-card');
+const featureObserver = new IntersectionObserver(
+    entries => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 100);
+            }
+        });
+    },
+    { threshold: 0.1 }
+);
+
+featureCards.forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    featureObserver.observe(card);
+});

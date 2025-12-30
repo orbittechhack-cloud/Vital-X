@@ -1,0 +1,128 @@
+.diet-page {
+    animation: fadeUp 0.6s ease;
+}
+
+.page-header {
+    margin-bottom: 30px;
+}
+
+.diet-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.diet-card {
+    background: linear-gradient(180deg, #0f172a, #020617);
+    padding: 22px;
+    border-radius: 16px;
+}
+
+.diet-card span {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.diet-card h2 {
+    margin: 10px 0;
+    color: #22c55e;
+}
+
+.progress {
+    height: 6px;
+    background: #1e293b;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progress div {
+    height: 100%;
+    background: linear-gradient(90deg, #22c55e, #ef4444);
+    width: 0%;
+    transition: width 0.4s;
+}
+
+/* MEALS */
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-btn {
+    padding: 8px 14px;
+    background: #22c55e;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.meal-summary {
+    margin-top: 14px;
+    background: #0f172a;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+/* AI TIP */
+.ai-diet {
+    margin-top: 40px;
+    background: linear-gradient(135deg, #0f172a, #020617);
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.ai-diet p {
+    margin-top: 10px;
+    font-size: 14px;
+    border-left: 3px solid #22c55e;
+    padding-left: 12px;
+}
+
+/* MODAL */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #0f172a;
+    padding: 20px;
+    border-radius: 14px;
+    width: 300px;
+}
+
+.food-list label {
+    display: block;
+    margin: 8px 0;
+}
+
+.modal-actions {
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-actions button {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-actions .cancel {
+    background: #ef4444;
+    color: white;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,21 +1,18 @@
-<aside class="sidebar">
-    <!-- Mobile close button -->
-    <button class="sidebar-close" onclick="toggleSidebar()">✕</button>
-
-    <h2 class="logo">Smart Life Saver</h2>
+<div class="sidebar">
+    <div class="logo">Smart Life Saver</div>
 
     <nav class="nav">
-        <a href="../../dashboard.html">📊 Dashboard</a>
+        <a href="dashboard.html">📊 <span>Dashboard</span></a>
 
-        <a href="pages/profile/profile.html">👤 Profile</a>
-        <a href="pages/body-health/body-health.html">🧍 3D Body Health</a>
-        <a id="womenNav" href="pages/womens-health/menstruation.html">🌸 Menstruation</a>
-        <a href="pages/diet-nutrition/diet.html">🥗 Diet & Nutrition</a>
-        <a href="pages/calorie-calculator/calorie-calculator.html">🔥 Calorie Calculator</a>
-        <a href="pages/ai-chat/ai-chat.html">🤖 AI Chat</a>
-        <a href="pages/environment/environment.html">🌍 Environment</a>
-        <a href="pages/emergency/emergency.html">🚨 Emergency</a>
+        <a data-page="profile" href="pages/profile/profile.html">👤 Profile</a>
+        <a data-page="body-health" href="pages/body-health/body-health.html">🧍 3D Body Health</a>
+        <a data-page="womens-health" href="pages/womens-health/menstruation.html">🌸 Menstruation</a>
+        <a data-page="diet" href="pages/diet-nutrition/diet.html">🥗 Diet & Nutrition</a>
+        <a data-page="calories" href="pages/calorie-calculator/calories.html">🔥 Calorie Calculator</a>
+        <a data-page="ai-chat" href="pages/ai-chat/ai-chat.html">🤖 AI Chat</a>
+        <a data-page="environment" href="pages/environment/environment.html">🌍 Environment</a>
+        <a data-page="emergency" href="pages/emergency/emergency.html">🚨 Emergency</a>
     </nav>
 
-    <button class="logout" onclick="logout()">Logout</button>
-</aside>
+    <a class="logout" href="#">Logout</a>
+</div>

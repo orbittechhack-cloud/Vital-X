@@ -1,30 +1,20 @@
-fetch("../../sidebar.html")
-    .then(res => res.text())
-    .then(data => {
-        document.getElementById("sidebar-container").innerHTML = data;
+fetch("sidebar.html")
+    .then(res => {
+        if (!res.ok) throw new Error("Sidebar not found");
+        return res.text();
+    })
+    .then(html => {
+        document.getElementById("sidebar-container").innerHTML = html;
 
-        // Auto active highlight
+        // active link
         const page = document.body.getAttribute("data-page");
-        const links = document.querySelectorAll(".nav a");
-
-        links.forEach(link => {
+        document.querySelectorAll(".nav a").forEach(link => {
             if (link.dataset.page === page) {
                 link.classList.add("active");
             }
         });
-    });
-
-fetch("sidebar.html")
-    .then(res => res.text())
-    .then(html => {
-        document.getElementById("sidebar-container").innerHTML = html;
-    });
-fetch("sidebar.html")
-    .then(res => res.text())
-    .then(html => {
-        document.getElementById("sidebar-container").innerHTML = html;
     })
-    .catch(() => {
+    .catch(err => {
         document.getElementById("sidebar-container").innerHTML =
-            "<p style='padding:10px'>Sidebar failed to load</p>";
+            "<p style='padding:12px;color:red'>Sidebar failed</p>";
     });

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Diet & Nutrition | Smart Life Saver</title>
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="../../dashboard.css">
+    <link rel="stylesheet" href="diet.css">
+</head>
+
+<body data-page="diet">
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <div id="sidebar-container"></div>
+
+    <!-- MAIN CONTENT -->
+    <main class="content diet-page">
+
+        <!-- HEADER -->
+        <div class="page-header">
+            <h1>🥗 Diet & Nutrition</h1>
+            <p>Daily food intake & calorie insights</p>
+        </div>
+
+        <!-- TOP SUMMARY CARDS -->
+        <section class="diet-cards">
+            <div class="diet-card">
+                <span>🔥 Calories</span>
+                <h2 id="totalCalories">0 kcal</h2>
+                <p id="calorieGoalText">Goal: --</p>
+                <div class="progress">
+                    <div id="calorieBar"></div>
+                </div>
+            </div>
+
+            <div class="diet-card">
+                <span>🥩 Protein</span>
+                <h2 id="protein">0 g</h2>
+            </div>
+
+            <div class="diet-card">
+                <span>🍞 Carbs</span>
+                <h2 id="carbs">0 g</h2>
+            </div>
+
+            <div class="diet-card">
+                <span>🧈 Fats</span>
+                <h2 id="fats">0 g</h2>
+            </div>
+        </section>
+
+        <!-- ADD MEAL -->
+        <section class="meal-section">
+            <div class="section-head">
+                <h2>🍽 Add Meal</h2>
+                <button class="add-btn" onclick="openMealModal()">➕ Add Meal</button>
+            </div>
+
+            <div id="mealSummary" class="meal-summary">
+                No meals added yet
+            </div>
+        </section>
+
+        <!-- AI DIET SUGGESTION -->
+        <section class="ai-diet">
+            <h2>🤖 Nutrition Insight</h2>
+            <p id="dietTip">Add meals to get personalized tips.</p>
+        </section>
+
+    </main>
+</div>
+
+<!-- ADD MEAL MODAL -->
+<div class="modal" id="mealModal">
+    <div class="modal-content">
+        <h3>Add Meal</h3>
+
+        <select id="mealType">
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+            <option value="Snacks">Snacks</option>
+        </select>
+
+        <div class="food-list">
+            <label><input type="checkbox" value="oats"> Oats</label>
+            <label><input type="checkbox" value="banana"> Banana</label>
+            <label><input type="checkbox" value="rice"> Rice</label>
+            <label><input type="checkbox" value="paneer"> Paneer</label>
+            <label><input type="checkbox" value="egg"> Eggs</label>
+        </div>
+
+        <div class="modal-actions">
+            <button onclick="addMeal()">Add</button>
+            <button class="cancel" onclick="closeMealModal()">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="../../load-sidebar.js"></script>
+<script src="diet.js"></script>
+</body>
+</html>
