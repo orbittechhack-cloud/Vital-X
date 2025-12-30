@@ -1,18 +1,89 @@
 <div class="sidebar">
-    <div class="logo">Smart Life Saver</div>
+    <!-- Logo Section -->
+    <div class="sidebar-header">
+        <div class="logo">
+            <span class="logo-icon">⚡</span>
+            <span class="logo-text">Vital-X</span>
+        </div>
+        <div class="logo-subtitle">Health Intelligence</div>
+    </div>
 
+    <!-- Navigation -->
     <nav class="nav">
-        <a href="dashboard.html">📊 <span>Dashboard</span></a>
+        <!-- Main Section -->
+        <div class="nav-section">
+            <div class="nav-label">Main</div>
+            <a href="dashboard.html" class="nav-item">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">Dashboard</span>
+            </a>
+        </div>
 
-        <a data-page="profile" href="pages/profile/profile.html">👤 Profile</a>
-        <a data-page="body-health" href="pages/body-health/body-health.html">🧍 3D Body Health</a>
-        <a data-page="womens-health" href="pages/womens-health/menstruation.html">🌸 Menstruation</a>
-        <a data-page="diet" href="pages/diet-nutrition/diet.html">🥗 Diet & Nutrition</a>
-        <a data-page="calories" href="pages/calorie-calculator/calories.html">🔥 Calorie Calculator</a>
-        <a data-page="ai-chat" href="pages/ai-chat/ai-chat.html">🤖 AI Chat</a>
-        <a data-page="environment" href="pages/environment/environment.html">🌍 Environment</a>
-        <a data-page="emergency" href="pages/emergency/emergency.html">🚨 Emergency</a>
+        <!-- Health Section -->
+        <div class="nav-section">
+            <div class="nav-label">Health</div>
+            <a data-page="profile" href="pages/profile/profile.html" class="nav-item">
+                <span class="nav-icon">👤</span>
+                <span class="nav-text">Profile</span>
+            </a>
+            <a data-page="body-health" href="pages/body-health/body-health.html" class="nav-item">
+                <span class="nav-icon">🧍</span>
+                <span class="nav-text">3D Body Health</span>
+            </a>
+            <a data-page="womens-health" href="pages/womens-health/menstruation.html" class="nav-item">
+                <span class="nav-icon">🌸</span>
+                <span class="nav-text">Menstruation</span>
+            </a>
+        </div>
+
+        <!-- Lifestyle Section -->
+        <div class="nav-section">
+            <div class="nav-label">Lifestyle</div>
+            <a data-page="diet" href="pages/diet-nutrition/diet.html" class="nav-item">
+                <span class="nav-icon">🥗</span>
+                <span class="nav-text">Diet & Nutrition</span>
+            </a>
+            <a data-page="calories" href="pages/calorie-calculator/calorie-calculator.html" class="nav-item">
+                <span class="nav-icon">🔥</span>
+                <span class="nav-text">Calorie Calculator</span>
+            </a>
+        </div>
+
+        <!-- AI & Tools Section -->
+        <div class="nav-section">
+            <div class="nav-label">AI & Tools</div>
+            <a data-page="ai-chat" href="pages/ai-chat/ai-chat.html" class="nav-item">
+                <span class="nav-icon">🤖</span>
+                <span class="nav-text">AI Chat</span>
+            </a>
+            <a data-page="environment" href="pages/environment/environment.html" class="nav-item">
+                <span class="nav-icon">🌍</span>
+                <span class="nav-text">Environment</span>
+            </a>
+        </div>
+
+        <!-- Emergency Section -->
+        <div class="nav-section">
+            <a data-page="emergency" href="pages/emergency/emergency.html" class="nav-item emergency-item">
+                <span class="nav-icon">🚨</span>
+                <span class="nav-text">Emergency</span>
+                <span class="nav-badge">!</span>
+            </a>
+        </div>
     </nav>
 
-    <a class="logout" href="#">Logout</a>
+    <!-- User Section -->
+    <div class="sidebar-footer">
+        <div class="user-info">
+            <div class="user-avatar">R</div>
+            <div class="user-details">
+                <div class="user-name">Rishabh</div>
+                <div class="user-status">Online</div>
+            </div>
+        </div>
+        <a class="logout" href="../auth/login.html">
+            <span class="logout-icon">🚪</span>
+            <span class="logout-text">Logout</span>
+        </a>
+    </div>
 </div>

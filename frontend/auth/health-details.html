@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Health Details | Smart Life Saver</title>
-
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="../css/main.css">
-    <!-- Auth CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Details | Vital-X</title>
     <link rel="stylesheet" href="auth.css">
 </head>
 <body>
+    <a href="../Index.html" class="back-to-landing">Back to Home</a>
 
-<div class="auth-container">
-    <h1>Health Details</h1>
-    <p>This helps us personalize your health tracking</p>
+    <div class="auth-wrapper">
+        <div class="auth-container glass">
+            <div class="auth-header">
+                <div class="logo">⚡ Vital-X</div>
+                <h1>Health Details</h1>
+                <p>This helps us personalize your health tracking</p>
+            </div>
 
     <form action="../dashboard/dashboard.html">
 
@@ -29,8 +31,9 @@
             <option value="female">Female</option>
             <option value="other">Other</option>
         </select>
-        <div id="menstruationSection" class="menstruation-box">
 
+        <!-- Menstruation Section (Hidden by default) -->
+        <div id="menstruationSection" class="menstruation-box">
             <h3>Menstruation Health</h3>
 
             <input type="number" placeholder="Average Cycle Length (days)">
@@ -50,39 +53,11 @@
                 <option>Heavy</option>
             </select>
 
-            <label>
-                <input type="checkbox"> Irregular Periods
-            </label>
-
-        </div>
-
-
-        <!-- 🌸 Menstruation Section (Hidden by default) -->
-        <div id="menstruationSection" class="menstruation-box">
-
-            <h3>Menstruation Health</h3>
-
-            <input type="number" placeholder="Average Cycle Length (days)">
-            <input type="number" placeholder="Period Duration (days)">
-
-            <select>
-                <option value="">Pain Level</option>
-                <option>Mild</option>
-                <option>Moderate</option>
-                <option>Severe</option>
-            </select>
-
-            <select>
-                <option value="">Flow Type</option>
-                <option>Light</option>
-                <option>Medium</option>
-                <option>Heavy</option>
-            </select>
-
-            <label>
-                <input type="checkbox"> Irregular Periods
-            </label>
-
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox"> Irregular Periods
+                </label>
+            </div>
         </div>
 
 
@@ -123,11 +98,11 @@
             <option>Heart Issue</option>
         </select>
 
-        <button type="submit">Continue to Dashboard</button>
-    </form>
-</div>
+            <button type="submit">Continue to Dashboard</button>
+        </form>
+        </div>
+    </div>
 
-<script src="auth.js"></script>
-
+    <script src="auth.js"></script>
 </body>
 </html>
