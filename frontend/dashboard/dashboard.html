@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Smart Life Saver</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body data-page="dashboard">
+
+<div class="dashboard">
+
+    <!-- SIDEBAR (LOADED DYNAMICALLY) -->
+    <div id="sidebar-container"></div>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+        <!-- GREETING -->
+        <div class="greeting">
+            <h1 id="greetingText"></h1>
+            <p>Your current health snapshot</p>
+            <div class="update-time" id="lastUpdated"></div>
+        </div>
+
+        <!-- HEALTH STATUS -->
+        <div class="health-status" id="healthStatus"></div>
+
+        <!-- QUICK STATS -->
+        <div class="quick-stats">
+            <div class="stat-box">💚 Health Score<br><span>72 / 100</span></div>
+            <div class="stat-box">⚡ Energy Level<br><span>Moderate</span></div>
+            <div class="stat-box">🛌 Sleep Quality<br><span>6.2 hrs</span></div>
+            <div class="stat-box">🦠 Immunity<br><span>Good</span></div>
+        </div>
+
+        <!-- VIEW TOGGLE -->
+        <div class="view-toggle">
+            <button class="active">Today</button>
+            <button>Weekly</button>
+        </div>
+
+        <!-- MAIN HEALTH CARDS -->
+        <div class="cards">
+
+            <div class="card" onclick="openDetail('heart')">
+                ❤️ Heart
+                <span>28%</span>
+                <div class="progress"><div style="width:28%"></div></div>
+            </div>
+
+            <div class="card" onclick="openDetail('lungs')">
+                🫁 Lungs
+                <span>42%</span>
+                <div class="progress"><div style="width:42%"></div></div>
+            </div>
+
+            <div class="card" onclick="openDetail('brain')">
+                🧠 Brain
+                <span>18%</span>
+                <div class="progress"><div style="width:18%"></div></div>
+            </div>
+
+            <div class="card" onclick="openDetail('risk')">
+                🩸 Risk Score
+                <span>36%</span>
+                <div class="progress"><div style="width:36%"></div></div>
+            </div>
+
+            <div class="card">
+                ⚖️ BMI
+                <span>23.4</span>
+                <div class="progress"><div style="width:55%"></div></div>
+            </div>
+
+            <div class="card">
+                🔥 Metabolism
+                <span>Normal</span>
+                <div class="progress"><div style="width:65%"></div></div>
+            </div>
+
+            <div class="card" onclick="goToCalories()">
+                🍽 Calories
+                <span id="dashboardCalories">-- kcal</span>
+            </div>
+
+        </div>
+
+        <!-- QUICK INSIGHTS -->
+        <section class="section">
+            <h2>🔍 Quick Insights</h2>
+            <ul class="insights">
+                <li>🚬 Smoking increased lung damage by <b>+4%</b> this week</li>
+                <li>🛌 Better sleep improved recovery by <b>+6%</b></li>
+                <li>🌫 High AQI detected yesterday</li>
+                <li>💊 Medication skipped today</li>
+            </ul>
+        </section>
+
+        <!-- HEALTH TRENDS -->
+        <section class="section">
+            <h2>📈 Health Trends</h2>
+            <div class="chart-placeholder">[ Health Score Trend – Chart Placeholder ]</div>
+            <div class="chart-placeholder">[ Risk Score Trend – Chart Placeholder ]</div>
+        </section>
+
+        <!-- LIFESTYLE + ENVIRONMENT -->
+        <section class="section grid-2">
+            <div class="box">
+                <h3>🥗 Lifestyle Snapshot</h3>
+                <p>🚬 Smoking: No</p>
+                <p>🍺 Alcohol: Low</p>
+                <p>🛌 Sleep: 6.2 hrs</p>
+                <p>🥦 Diet Quality: Medium</p>
+            </div>
+
+            <div class="box">
+                <h3>🌍 Environment Impact</h3>
+                <p>🌫 AQI: 184 (Unhealthy)</p>
+                <p>🌡 Temperature: 34°C</p>
+                <p>🌬 Pollution Exposure: High</p>
+            </div>
+        </section>
+
+        <!-- AI INSIGHTS -->
+        <section class="section ai-box">
+            <h2>🤖 AI Health Insights</h2>
+            <p class="ai-quote animate-quote">
+                “Our AI dynamically adapts health recommendations based on a computed Health Score derived from organ‑level data.”
+            </p>
+            <div id="aiInsights"></div>
+        </section>
+
+        <!-- SAFETY -->
+        <section class="section safety">
+            <h2>🚨 Safety & Alerts</h2>
+            <p>✅ No emergency detected</p>
+            <p>🟡 2 moderate health alerts today</p>
+            <p>🔔 Medication reminder pending</p>
+        </section>
+
+    </main>
+</div>
+
+<!-- SCRIPTS -->
+<script src="load-sidebar.js"></script>
+<script src="dashboard.js"></script>
+
+</body>
+</html>

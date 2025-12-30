@@ -97,3 +97,34 @@ function handleGenderChange() {
         section.style.display = "none";
     }
 }
+
+function loginUser() {
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const errorMsg = document.getElementById("errorMsg");
+
+    if (!email || !password) return false;
+
+    // Dummy users (temporary – frontend only)
+    const users = [
+        { email: "test@gmail.com", password: "123456" },
+        { email: "admin@gmail.com", password: "admin123" }
+    ];
+
+    const userFound = users.find(
+        user => user.email === email.value && user.password === password.value
+    );
+
+    if (!userFound) {
+        if (errorMsg) {
+            errorMsg.textContent = "❌ User not found or incorrect password";
+        } else {
+            alert("User not found or incorrect password");
+        }
+        return false;
+    }
+
+    // Login success
+    window.location.href = "../dashboard/dashboard.html";
+    return false;
+}

@@ -1,67 +1,438 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>VitalX</title>
-
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="css/main.css">
-    <!-- Landing Page CSS -->
-    <link rel="stylesheet" href="landing/landing.css">
+    <meta charset="UTF-8" />
+    <title>Smart Life Saver – Intelligent Health Monitoring</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="landing/landing.css" />
 </head>
 <body>
 
-<!-- Navbar -->
+<!-- NAVBAR -->
 <header class="navbar">
-    <h2>Vital-X</h2>
-    <a href="auth/login.html" class="btn">Login</a>
+    <div class="nav-left">
+        <div class="logo">⚡ Vital-X</div>
+    </div>
+
+    <nav class="nav-center">
+        <a href="#features">Features</a>
+        <a href="#how">How It Works</a>
+        <a href="#about">About</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#community">Community</a>
+    </nav>
+
+
+    <div class="nav-right">
+        <a href="auth/login.html" class="signin">Sign In</a>
+        <a href="/Smart-Life-Saver/frontend/auth/signup.html"
+           class="btn primary">
+            Get Started
+        </a>
+
+    </div>
 </header>
 
-<!-- HERO SECTION WITH SPLINE -->
-<section class="hero-spline">
+<!-- HERO -->
+<!-- HERO -->
+<section class="hero">
 
-    <!-- Spline Background -->
-    <iframe
-            class="spline-bg"
-            src="https://my.spline.design/visualicons-25cEmCKiCi3xwzirF8r3GmmT/"
-            frameborder="0">
-    </iframe>
+    <!-- LEFT -->
+    <div class="hero-left">
+        <span class="pill">⚡ AI‑Powered Health Intelligence</span>
 
-    <!-- Content on top -->
-    <div class="hero-content">
-        <h1>AI-Based Full Body Health Tracking</h1>
+        <h1>
+            Your Health,<br>
+            <span>Intelligently</span><br>
+            Monitored 24/7
+        </h1>
+
         <p>
-            Track body damage, improve health with actions,
-            and predict emergencies before they happen.
+            Vital-X uses advanced AI to track vitals,
+            predict risks, and deliver real‑time health insights.
         </p>
 
-        <div class="hero-buttons">
-            <a href="auth/login.html" class="btn">Login</a>
-            <a href="auth/signup.html" class="btn-primary">Get Started</a>
+        <div class="hero-cta">
+            <a href="/auth/signup.html"
+               class="btn primary big">
+                Data‑Driven Health
+            </a>
         </div>
+
+        <div class="trust">
+            <strong>5,000+</strong> users trust Smart Life Saver
+        </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="hero-right">
+        <div class="hero-visual">
+
+            <div class="health-cluster">
+
+                <!-- Heart -->
+                <div class="glass-card small heart draggable">
+                    <div class="icon heart">❤️</div>
+                    <div>
+                        <p class="label">Heart Rate</p>
+                        <h3>72 <span>bpm</span></h3>
+                    </div>
+                </div>
+
+                <!-- Stress -->
+                <div class="glass-card small stress draggable">
+                    <div class="icon brain">🧠</div>
+                    <div>
+                        <p class="label">Stress Level</p>
+                        <h3>Low</h3>
+                    </div>
+                </div>
+
+                <!-- SpO2 -->
+                <div class="glass-card small spo2 draggable">
+                    <div class="icon wave">💓</div>
+                    <div>
+                        <p class="label">SpO2</p>
+                        <h3>98 <span>%</span></h3>
+                    </div>
+                </div>
+
+                <!-- Score -->
+                <div class="glass-card large score draggable">
+                    <div class="score-header">
+                        <span>Health Score</span>
+                        <span class="live">Live</span>
+                    </div>
+
+                    <div class="ring-wrapper">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="52" />
+                            <circle cx="60" cy="60" r="52" class="progress" />
+                        </svg>
+                        <div class="ring-text">92</div>
+                    </div>
+
+                    <p class="status">Excellent health status</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- FEATURES -->
+<section class="section" id="features">
+    <span class="section-tag">FEATURES</span>
+    <h2>Intelligent Health Monitoring</h2>
+    <p class="section-sub">
+        Experience enterprise‑grade AI health protection.
+    </p>
+
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="icon">🧠</div>
+            <h3>AI‑Powered Analysis</h3>
+            <p>Real‑time ML analysis to detect patterns & anomalies.</p>
+        </div>
+
+        <div class="feature-card highlight">
+            <div class="icon">📈</div>
+            <h3>Predictive Insights</h3>
+            <p>Forecast risks before they become emergencies.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon">⏱</div>
+            <h3>24/7 Monitoring</h3>
+            <p>Continuous tracking without interruption.</p>
+        </div>
+
+        <div class="feature-card wide">
+            <div class="icon">🛡</div>
+            <h3>Emergency Response</h3>
+            <p>Automatic alerts to contacts & services in &lt;60s.</p>
+        </div>
+
+        <div class="feature-card wide">
+            <div class="icon">🔔</div>
+            <h3>Smart Alerts</h3>
+            <p>Medication, anomaly & lifestyle notifications.</p>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works" id="how">
+    <span class="section-tag">HOW IT WORKS</span>
+    <h2>Simple Yet Powerful</h2>
+    <p class="section-sub">
+        Getting started with Smart Life Saver is easy.
+        Follow these simple steps to begin your health journey.
+    </p>
+
+    <div class="steps-container">
+
+        <!-- STEP 1 -->
+        <div class="step-card">
+            <div class="step-number">01</div>
+            <div class="step-icon">⌚</div>
+            <h3>Connect Your Devices</h3>
+            <p>
+                Link your smartwatch, fitness tracker, or any compatible
+                health device to start collecting real‑time health data.
+            </p>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="step-arrow">➜</div>
+
+        <div class="step-card">
+            <div class="step-number">02</div>
+            <div class="step-icon">🧠</div>
+            <h3>AI Analyzes Data</h3>
+            <p>
+                Our AI processes your health metrics continuously,
+                identifying patterns, anomalies, and potential risks.
+            </p>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="step-arrow">➜</div>
+
+        <div class="step-card">
+            <div class="step-number">03</div>
+            <div class="step-icon">📊</div>
+            <h3>Get Personalized Insights</h3>
+            <p>
+                Receive tailored recommendations, scores, and actionable
+                insights based on your unique health profile.
+            </p>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="step-arrow">➜</div>
+
+        <div class="step-card">
+            <div class="step-number">04</div>
+            <div class="step-icon">🔔</div>
+            <h3>Stay Informed</h3>
+            <p>
+                Get instant alerts for anomalies, emergency triggers,
+                medication reminders, and regular health reports.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- STATS SECTION -->
+<section class="stats-section">
+    <div class="stats-glass">
+
+        <div class="stat-item">
+            <h3 data-count="5000">0</h3>
+            <p>Active Users</p>
+        </div>
+
+        <div class="stat-item">
+            <h3 data-count="99.9">0</h3>
+            <p>Uptime</p>
+        </div>
+
+        <div class="stat-item">
+            <h3 data-count="20000">0</h3>
+            <p>Health Insights</p>
+        </div>
+
+        <div class="stat-item">
+            <h3 data-count="4.6">0</h3>
+            <p>User Rating</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- TESTIMONIALS -->
+<section class="section" id="testimonials">
+    <span class="section-tag">TESTIMONIALS</span>
+    <h2>Loved by Users Worldwide</h2>
+    <p class="section-sub">
+        Real feedback from real users.
+    </p>
+
+    <div class="testimonial-grid">
+        <div class="testimonial">
+            ⭐⭐⭐⭐⭐
+            <p>Smart Life Saver changed how I track my health.</p>
+            <b>Sarah Mitchell</b>
+        </div>
+
+        <div class="testimonial">
+            ⭐⭐⭐⭐⭐
+            <p>Impressive AI accuracy. Highly recommended.</p>
+            <b>Dr. James Chen</b>
+        </div>
+
+        <div class="testimonial">
+            ⭐⭐⭐⭐⭐
+            <p>Perfect for families & elderly monitoring.</p>
+            <b>Emily Rodriguez</b>
+        </div>
+    </div>
+</section>
+
+<section class="about-section" id="about">
+
+    <span class="section-tag">ABOUT</span>
+    <h2>
+        What is <span>Smart Life Saver</span>?
+    </h2>
+
+    <p class="about-intro">
+        Smart Life Saver is an AI‑powered health intelligence platform designed to
+        continuously monitor vital signals, detect risks early, and help users
+        make smarter health decisions — in real time.
+    </p>
+
+    <div class="about-grid">
+
+        <div class="about-card">
+            <div class="about-icon">🧠</div>
+            <h3>AI‑Driven Insights</h3>
+            <p>
+                Advanced machine learning models analyze your health data to identify
+                hidden patterns and predict potential risks before they become serious.
+            </p>
+        </div>
+
+        <div class="about-card">
+            <div class="about-icon">📊</div>
+            <h3>Live Health Scoring</h3>
+            <p>
+                A dynamic health score gives you a clear, easy‑to‑understand snapshot
+                of your overall health — updated continuously.
+            </p>
+        </div>
+
+        <div class="about-card">
+            <div class="about-icon">🔔</div>
+            <h3>Smart Alerts</h3>
+            <p>
+                Receive instant alerts for anomalies, emergencies, and important
+                health events so you can act at the right time.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="community-section" id="community">
+
+    <span class="section-tag">COMMUNITY</span>
+    <h2>
+        Built With <span>People</span> at the Core
+    </h2>
+
+    <p class="community-intro">
+        Join a growing community of developers, health experts, and users
+        working together to build safer, smarter health solutions.
+    </p>
+
+    <div class="community-grid">
+
+        <div class="community-card">
+            <div class="community-icon">🌍</div>
+            <h3>Global Users</h3>
+            <p>
+                Thousands of users across the world trust Vital‑X to monitor
+                and improve their health every day.
+            </p>
+        </div>
+
+        <div class="community-card">
+            <div class="community-icon">💬</div>
+            <h3>Open Discussions</h3>
+            <p>
+                Share feedback, discuss features, and help shape the future
+                of AI‑powered health monitoring.
+            </p>
+        </div>
+
+        <div class="community-card">
+            <div class="community-icon">🤝</div>
+            <h3>Partners & Contributors</h3>
+            <p>
+                Collaborate with healthcare professionals, developers,
+                and research institutions worldwide.
+            </p>
+        </div>
+
     </div>
 
 </section>
 
 
-
-
-<!-- Features Section -->
-<section class="features">
-    <div class="feature-card">🧠 Live Body Health %</div>
-    <div class="feature-card">🌍 Pollution Impact Tracking</div>
-    <div class="feature-card">🍽️ Food & Medicine Recovery</div>
-    <div class="feature-card">🚨 Emergency Risk Prediction</div>
-    <div class="feature-card">🌸 Women Health Monitoring</div>
-</section>
-
-
-<!-- Footer -->
 <footer class="footer">
-    <p>© 2025 Smart Life Saver | AI Health Monitoring Website</p>
+
+    <div class="footer-grid">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+            <div class="footer-logo">⚡ Vital-X</div>
+            <p>
+                AI‑powered health monitoring for a healthier you.
+            </p>
+        </div>
+
+        <!-- PRODUCT -->
+        <div class="footer-col">
+            <h4>Product</h4>
+            <a href="#features">Features</a>
+            <a href="#how">How It Works</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="calorie-calculator.html">Calorie Calculator</a>
+        </div>
+
+        <!-- COMPANY -->
+        <div class="footer-col">
+            <h4>Company</h4>
+            <a href="#about">About</a>
+            <a href="#community">Community</a>
+            <a href="#testimonials">Testimonials</a>
+        </div>
+
+        <!-- RESOURCES -->
+        <div class="footer-col">
+            <h4>Resources</h4>
+            <a href="auth/login.html">Login</a>
+            <a href="auth/signup.html">Sign Up</a>
+            <a href="profile.html">Profile</a>
+        </div>
+
+        <!-- LEGAL -->
+        <div class="footer-col">
+            <h4>Legal</h4>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026 Vital-X. All rights reserved.</span>
+
+        <div class="socials">
+            <a href="#">🐦</a>
+            <a href="#">💻</a>
+            <a href="#">🔗</a>
+        </div>
+    </div>
+
 </footer>
 
-<!-- Landing JS -->
+
 <script src="landing/landing.js"></script>
 </body>
 </html>

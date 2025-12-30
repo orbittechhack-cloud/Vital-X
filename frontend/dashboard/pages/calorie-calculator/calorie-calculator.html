@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calorie Calculator | Smart Life Saver</title>
+
+    <!-- Dashboard base styles -->
+    <link rel="stylesheet" href="../../dashboard.css">
+    <!-- Page styles -->
+    <link rel="stylesheet" href="calorie-calculator.css">
+</head>
+
+<body data-page="calorie">
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <div id="sidebar-container"></div>
+    <button class="hamburger" onclick="toggleSidebar()">☰</button>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+        <h1>🔥 Calorie Calculator</h1>
+        <p class="subtitle">Accurate TDEE, Weight Goals & Daily Burn</p>
+
+        <div class="calculator-grid">
+
+            <!-- USER INPUT -->
+            <div class="card">
+                <h3>🧮 Your Details</h3>
+
+                <input id="age" type="number" placeholder="Age">
+                <input id="height" type="number" placeholder="Height (cm)">
+                <input id="weight" type="number" placeholder="Weight (kg)">
+
+                <select id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+
+                <select id="activity">
+                    <option value="1.2">Sedentary</option>
+                    <option value="1.375">Light (1–3 days)</option>
+                    <option value="1.55">Moderate (4–5 days)</option>
+                    <option value="1.725">Active (6–7 days)</option>
+                    <option value="1.9">Very Active</option>
+                </select>
+
+                <button onclick="calculateTDEE()">Calculate</button>
+            </div>
+
+            <!-- RESULTS -->
+            <div class="card result">
+                <h3>📊 Results</h3>
+
+                <p>Maintenance (TDEE)</p>
+                <h2 id="maintenance">-- kcal</h2>
+
+                <div class="divider"></div>
+
+                <h4>📉 Weight Loss</h4>
+                <p>Mild: <span id="mildLoss">--</span></p>
+                <p>Normal: <span id="loss">--</span></p>
+                <p>Extreme: <span id="extremeLoss">--</span></p>
+
+                <h4>📈 Weight Gain</h4>
+                <p>Mild: <span id="mildGain">--</span></p>
+                <p>Normal: <span id="gain">--</span></p>
+                <p>Fast: <span id="fastGain">--</span></p>
+            </div>
+
+            <!-- CALORIES BURN -->
+            <div class="card">
+                <h3>🔥 Calories Burn Today</h3>
+
+                <input id="walk" type="number" placeholder="Walking (min)">
+                <input id="run" type="number" placeholder="Running (min)">
+                <input id="gym" type="number" placeholder="Gym (min)">
+
+                <button onclick="calculateBurn()">Calculate Burn</button>
+
+                <h2 id="burn">-- kcal</h2>
+            </div>
+
+        </div>
+
+    </main>
+</div>
+
+<!-- Sidebar loader -->
+<script src="../../load-sidebar-pages.js"></script>
+<script src="calorie-calculator.js"></script>
+
+</body>
+</html>

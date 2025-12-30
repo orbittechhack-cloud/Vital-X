@@ -12,9 +12,10 @@
     <h1>Create Account</h1>
     <p>Start your health journey</p>
 
+    <form onsubmit="return saveUserDetails()" action="health-details.html">
     <form onsubmit="return validatePassword()" action="health-details.html">
 
-        <input type="text" placeholder="Full Name" required>
+        <input type="text" id="fullName" placeholder="Full Name" required>
         <input type="email" placeholder="Email" required>
 
         <!-- Password -->
