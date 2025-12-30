@@ -2,77 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sign Up | Smart Life Saver</title>
-    <link rel="stylesheet" href="../css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Vital-X</title>
     <link rel="stylesheet" href="auth.css">
 </head>
+
 <body>
+<a href="../Index.html" class="back-to-landing">Back to Home</a>
 
-<div class="auth-container">
-    <h1>Create Account</h1>
-    <p>Start your health journey</p>
-
-    <form onsubmit="return saveUserDetails()" action="health-details.html">
-    <form onsubmit="return validatePassword()" action="health-details.html">
-
-        <input type="text" id="fullName" placeholder="Full Name" required>
-        <input type="email" placeholder="Email" required>
-
-        <!-- Password -->
-        <div class="password-box">
-            <input type="password" id="password" placeholder="Password" required>
-            <span onclick="togglePassword('password')"></span>
+<div class="auth-wrapper">
+    <div class="auth-container glass">
+        <!-- Header -->
+        <div class="auth-header">
+            <div class="logo">⚡ Vital-X</div>
+            <p>Create your account to start monitoring</p>
         </div>
 
-        <!-- Confirm Password -->
-        <div class="password-box">
-            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
-            <span onclick="togglePassword('confirmPassword')"></span>
-        </div>
+        <!-- Form -->
+        <form onsubmit="return validatePassword()" action="health-details.html">
+            <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Full Name"
+                    required
+                    autocomplete="name"
+            >
 
-        <button type="submit">Continue</button>
-    </form>
+            <input
+                    type="email"
+                    id="email"
+                    placeholder="Email Address"
+                    required
+                    autocomplete="email"
+            >
 
+            <!-- Password -->
+            <div class="password-box">
+                <input
+                        type="password"
+                        id="password"
+                        placeholder="Password"
+                        required
+                        autocomplete="new-password"
+                >
+                <span class="password-toggle" onclick="togglePassword('password')"></span>
+            </div>
 
-    <p class="note">
-        Already have an account?
-        <a href="login.html">Login</a>
-    </p>
-    <script>
-        function validatePassword() {
-            const password = document.getElementById("password").value;
-            const confirmPassword = document.getElementById("confirmPassword").value;
+            <!-- Confirm Password -->
+            <div class="password-box">
+                <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm Password"
+                        required
+                        autocomplete="new-password"
+                >
+                <span class="password-toggle" onclick="togglePassword('confirmPassword')"></span>
+            </div>
 
-            if (password !== confirmPassword) {
-                alert("Passwords do not match!");
-                return false; // stop form submission
-            }
+            <button type="submit">Create Account</button>
+        </form>
 
-            return true; // allow form submission
-        }
-    </script>
-
+        <p class="note">
+            Already have an account?
+            <a href="login.html">Sign In</a>
+        </p>
+    </div>
 </div>
-<link rel="stylesheet" href="../css/main.css">
-<link rel="stylesheet" href="auth.css">
+
+<script src="auth.js"></script>
 <script>
+    // Enhanced password toggle with visual feedback
     function togglePassword(id) {
         const input = document.getElementById(id);
-        input.type = input.type === "password" ? "text" : "password";
+        const toggle = input.nextElementSibling;
+
+        if (input.type === "password") {
+            input.type = "text";
+            toggle.classList.add("show");
+        } else {
+            input.type = "password";
+            toggle.classList.remove("show");
+        }
     }
 
+    // Enhanced password validation
     function validatePassword() {
-        const password = document.getElementById("password").value;
-        const confirmPassword = document.getElementById("confirmPassword").value;
+        const password = document.getElementById("password");
+        const confirmPassword = document.getElementById("confirmPassword");
 
-        if (password !== confirmPassword) {
-            alert("Passwords do not match!");
+        if (!password || !confirmPassword) return true;
+
+        if (password.value !== confirmPassword.value) {
+            alert("❌ Passwords do not match!");
+            confirmPassword.focus();
             return false;
         }
+
+        if (password.value.length < 6) {
+            alert("❌ Password must be at least 6 characters long!");
+            password.focus();
+            return false;
+        }
+
         return true;
     }
 </script>
-
-<script src="auth.js"></script>
 </body>
 </html>

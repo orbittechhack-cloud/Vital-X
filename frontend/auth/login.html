@@ -2,33 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login | Smart Life Saver</title>
-
-    <link rel="stylesheet" href="../css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | Vital-X</title>
     <link rel="stylesheet" href="auth.css">
 </head>
 <body>
+<a href="../Index.html" class="back-to-landing">Back to Home</a>
 
-<div class="auth-container">
-    <h1>Welcome Back</h1>
-    <p>Login to continue your health journey</p>
+<div class="auth-wrapper">
+    <div class="auth-container glass">
+        <!-- Header -->
+        <div class="auth-header">
+            <div class="logo">⚡ Vital-X</div>
+            <h1>Welcome Back</h1>
+            <p>Sign in to continue your health journey</p>
+        </div>
 
-    <form onsubmit="return loginUser()">
-        <input type="email" id="email" placeholder="Email" required>
-        <input type="password" id="password" placeholder="Password" required>
+        <!-- Form -->
+        <form onsubmit="return loginUser()">
+            <input
+                    type="email"
+                    id="email"
+                    placeholder="Email Address"
+                    required
+                    autocomplete="email"
+            >
 
-        <!-- Error message -->
-        <p id="errorMsg" class="error"></p>
+            <div class="password-box">
+                <input
+                        type="password"
+                        id="password"
+                        placeholder="Password"
+                        required
+                        autocomplete="current-password"
+                >
+                <span class="password-toggle" onclick="togglePassword('password')"></span>
+            </div>
 
-        <button type="submit">Login</button>
-    </form>
+            <!-- Error message -->
+            <p id="errorMsg" class="error"></p>
 
-    <p class="note">
-        New user?
-        <a href="signup.html">Create an account</a>
-    </p>
+            <button type="submit">Sign In</button>
+        </form>
+
+        <p class="note">
+            New user?
+            <a href="signup.html">Create an account</a>
+        </p>
+    </div>
 </div>
 
 <script src="auth.js"></script>
+<script>
+    // Enhanced password toggle with visual feedback
+    function togglePassword(id) {
+        const input = document.getElementById(id);
+        const toggle = input.nextElementSibling;
+
+        if (input.type === "password") {
+            input.type = "text";
+            toggle.classList.add("show");
+        } else {
+            input.type = "password";
+            toggle.classList.remove("show");
+        }
+    }
+</script>
 </body>
 </html>
