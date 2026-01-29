@@ -7,7 +7,7 @@
 
 [[redirects]]
   from = "/*"
-  to = "/Index.html"
+  to = "/index.html"
   status = 200
   force = false
   
